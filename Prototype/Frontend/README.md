@@ -89,6 +89,3 @@ Anshika Gaur
 
 ---
 
-## Note
-
-This project is made for learning / hackathon purposes.
