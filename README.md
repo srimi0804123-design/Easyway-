@@ -149,6 +149,7 @@ Interpretation over rigid rules.
 
 ## AI Processing Flow
 ![AI_flow](flowchart/AI_processing_layers.jpg)
+
 ---
 ## Demo Prototype
 * Input Text
