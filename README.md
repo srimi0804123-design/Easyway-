@@ -160,7 +160,7 @@ Interpretation over rigid rules.
 * Extracted Details
 ![output](Prototype/Images/output(UPI).png)
 
-----
+---
 ## Backend API
 
 ### Endpoint
