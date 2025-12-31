@@ -1,6 +1,6 @@
 import json
 from datetime import date
-import ollama
+import ollama  #Locally used LLM - Mistral
 
 
 def extract_expense(text: str) -> dict:
@@ -47,7 +47,7 @@ Input text:
 
         raw_output = response["response"].strip()
 
-    except Exception as e:
+    except Exception as e: #When a error occures instead of showing error its shows this
         return {
             "amount": 0,
             "merchant": "Unknown",
@@ -72,8 +72,8 @@ Input text:
             "reasoning": "Failed to parse LLM output"
         }
 
-    if expense_data["date"] == "Unknown":
-        expense_data["date"] = date.today().isoformat()
+    if expense_data["date"] == "Unknown": #If the date is now extracted from the given info
+        expense_data["date"] = date.today().isoformat() #It replaces it from that day's date
         expense_data["reasoning"] += " | Date defaulted to today"
 
     return expense_data
