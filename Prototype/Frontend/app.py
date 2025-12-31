@@ -30,7 +30,7 @@ elif options == "Image":
         type=["png", "jpg", "jpeg"]
     )
     if image_input:
-        st.image(image_input, caption="Uploaded Image", use_column_width=True)
+        st.image(image_input, caption="Uploaded Image", width=300)
 
 # Button
 if st.button("Extract Expense"):
