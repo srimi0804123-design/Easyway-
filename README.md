@@ -143,8 +143,24 @@ Interpretation over rigid rules.
 4. Structured expense data is generated
 5. Results are returned and displayed
 
----
+## System Main Flowchart
 
+![Main flowchart](flowchart/main_flowchart.jpg)
+
+## AI Processing Flow
+![AI_flow](flowchart/AI_processing_layers.jpg)
+---
+## Demo Prototype
+* Input Text
+![Input_Text](Prototype/Images/input_text.png)
+* Extracted Details
+![output](Prototype/Images/output(text).png)
+* Upload bill/UPI Screenshot
+![UPI_sample](Prototype/Images/UPI_sample.png)
+* Extracted Details
+![output](Prototype/Images/output(UPI).png)
+
+----
 ## Backend API
 
 ### Endpoint
