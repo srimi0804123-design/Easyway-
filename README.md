@@ -1,46 +1,61 @@
-# EASY WAY
+# EASY WAY 💸
+
+### AI-Powered Expense Tracker for Students
 
 ## Overview
 
-**EASY WAY** is a smart and efficient financial management system that uses **Artificial Intelligence (AI)** and **Machine Learning (ML)** to analyze uploaded bills and generate a personalized budget plan.
+**EASY WAY** is an intelligent expense tracking and budget management system built using **Artificial Intelligence (AI)** and **Machine Learning (ML)**. It automatically extracts expense details from **bills, receipts, and UPI screenshots**, then converts them into structured data to help users understand and manage their spending.
 
-The system helps users:
-- Track expenses
-- Identify spending patterns
-- Make data-driven financial decisions
+The goal is simple:
+make expense tracking **effortless**, **automatic**, and **not boring**.
 
 ---
 
 ## Problem Statement
 
-- Students use UPI or cash for most transactions.
-- Expense tracking is often boring and neglected.
-- Users fail to analyze bills effectively.
+Most students:
 
-This project automates expense analysis using AI/ML to provide intelligent and hassle-free budget tracking.
+* Rely heavily on **UPI and cash** for daily transactions
+* Rarely track expenses consistently
+* Avoid budgeting because it feels tedious
+* Never analyze bills beyond “money gone, pain remains”
+
+Manual expense tracking fails because it depends on discipline.
+This project removes that dependency entirely.
 
 ---
 
-## Solution Overview
+## Solution
 
-1. Users upload a photo of a bill or a UPI screenshot.
-2. The frontend sends data to the backend via API requests.
-3. OCR extracts information from the image.
-4. FastAPI processes the data and runs LLM models for expense categorization.
-5. Budget insights are visually displayed to the user.
+**EASY WAY** automates expense analysis using AI.
+
+### How it works:
+
+1. User uploads a **bill image**, **UPI screenshot**, or enters **text/voice input**
+2. The frontend sends data to the backend via API
+3. **OCR** extracts raw text from images
+4. A **local LLM** interprets the text and identifies expense details
+5. Structured expense data is returned
+6. Insights are displayed instantly on the frontend
+
+No spreadsheets. No mental math. No regret later.
 
 ---
 
 ## Key Features
 
-- Upload bills (Image )
-- AI extracts:
-  - Amount
-  - Merchant
-  - Date
-  - Category
-- Expenses are automatically added to the tracker
-- Optional voice note input for cash expenses
+* Upload receipts, bills, or UPI screenshots
+* Enter expenses using plain text
+* AI automatically extracts:
+
+  * Amount
+  * Merchant
+  * Date
+  * Category
+  * Payment mode
+* Expenses are categorized intelligently
+* Confidence score included for transparency
+* Optional voice-based input for cash expenses (planned)
 
 ---
 
@@ -48,102 +63,170 @@ This project automates expense analysis using AI/ML to provide intelligent and h
 
 ### Frontend
 
-**React** (Framework of HTML, JavaScript)
+* **Streamlit** (Prototype UI)
+* Lightweight, mobile-friendly interface
+* Supports:
 
-Used in prototype:
-- Lightweight, mobile-friendly web interface using **Streamlit**
-- API communication using **Python Requests**
+  * Image upload
+  * Text-based expense entry
+* Communicates with backend via REST API
 
-**Supports:**
-- Image upload (receipt, bill)
-- Voice input (spoken expenses)
-
-**Focus:**  
-Capture input with the least possible friction
+**Focus:**
+Minimum friction for user input
 
 ---
 
 ### Backend
 
-**Python-based backend using FastAPI**
+* **Python + FastAPI**
+* Handles:
 
-**Handles:**
-- Request validation
-- Input routing
-- AI pipeline coordination
-- Response formatting
+  * API requests
+  * OCR processing
+  * LLM-based reasoning
+  * Structured JSON responses
 
-**Focus:**  
-Simplicity, speed, and clear data flow
+**Focus:**
+Speed, simplicity, and clean data flow
 
 ---
 
 ## AI Processing Layer
 
-### OCR
-- Extracts raw text from uploaded images
-- Handles printed and semi-structured receipts
+### OCR (Optical Character Recognition)
 
-### Speech-to-Text
-- Converts voice input into text for processing
+* Extracts text from uploaded images
+* Handles printed and semi-structured receipts
+* Powered by **Tesseract OCR**
 
 ### Large Language Model (LLM)
-- Interprets unstructured text
-- Identifies key expense details:
-  - Amount
-  - Merchant
-  - Date
-  - Category
-- Normalizes inconsistent or incomplete inputs
-- Converts raw data into structured format
 
-**Focus:**  
-Intelligence through interpretation, not rule-based parsing
+* Local **Mistral model** via **Ollama**
+* Interprets unstructured text
+* Infers missing or unclear information
+* Converts raw text into structured expense data
+* Assigns confidence scores
+
+**Design Philosophy:**
+Interpretation over rigid rules.
 
 ---
 
 ## Database
 
-**MongoDB**
+* **MongoDB** (Planned)
+* Not used in the current prototype
+* Chosen for:
 
-- Not currently used in the prototype
-- Planned for future versions to support scalability
-- Flexible document-based structure
-- Suitable for handling large volumes of bill and expense data
+  * Flexible document structure
+  * Scalability
+  * Efficient handling of large expense datasets
 
 ---
 
-## Tools
+## Tools & Development Environment
 
-- **Git** – Tracks and manages changes in source code
-- **GitHub** – Hosts the project repository and enables collaboration
-• **Visual Studio Code (VS Code)** is used as the primary development tool for writing, debugging, and managing the project code. It helps in productivity and efficiency of program.
------
+* **Git** – Version control
+* **GitHub** – Repository hosting and collaboration
+* **Visual Studio Code** – Primary development environment
+
+---
 
 ## System Workflow
 
-1. User uploads bills
-2. Requests are sent to the FastAPI backend
-3. Backend processes the bill using rule-based logic
-4. Budget details are generated and returned
-5. Results are displayed on the frontend
+1. User submits expense input
+2. Frontend sends request to FastAPI backend
+3. Backend processes input:
 
-### System Flow Block Diagram
+   * OCR (if image)
+   * LLM reasoning
+4. Structured expense data is generated
+5. Results are returned and displayed
 
+---
 
-## FURTHER SCALABILITY
-* 1. A feature can be added to give monthly behavioral insights and  pridict alerts when the user is about to overspend. 
-* 2.MongoDB is used for its flexible structure and ability to handle large datasets efficiently by storing them.
-* 3.A Multi-user or Social Feature can be added. 
+## Backend API
+
+### Endpoint
+
+**POST `/parse-expense`**
+
+#### Input (multipart/form-data)
+
+* `text` (optional)
+* `file` (optional – image)
+
+#### Output (JSON)
+
+```json
+{
+  "amount": 59,
+  "merchant": "Local Shop",
+  "category": "Food",
+  "date": "2025-01-01",
+  "payment_mode": "Cash",
+  "confidence": 0.82,
+  "reasoning": "Amount inferred from text. Category inferred from keyword."
+}
+```
+
+---
+
+## How to Run the Project
+
+### Backend
+
+```bash
+uvicorn backend.main:app --reload
+```
+
+API Docs:
+
+```
+http://127.0.0.1:8000/docs
+```
+
+---
+
+### Frontend
+
+```bash
+streamlit run app.py
+```
+
+---
+
+## Limitations
+
+* OCR accuracy depends on image quality
+* No persistent storage (yet)
+* No authentication or multi-user support
+* Prototype-level implementation, not production-ready
+
+---
+
+## Future Enhancements
+
+1. Monthly spending analysis and behavioral insights
+2. Overspending prediction and alerts
+3. MongoDB integration for persistent storage
+4. Multi-user support
+5. Social or shared expense features
+
+---
+
 ## Authors
 
-- Swastika Mukherjee  
-- Priyanshi Tamta  
-- Vanshika Maheshwari  
--  Anshika Gaur
+* **Swastika Mukherjee**
+* **Priyanshi Tamta**
+* **Vanshika Maheshwari**
+* **Anshika Gaur**
 
-## CREDITS
-*  Vanshika Maheshwari : Backend
-* Anshika Gaur : Frontend
-* Swastika Mukherjee
-* Priyanshi Tamta: Readme.MD files and overall management
+---
+
+## Credits
+
+* **Vanshika Maheshwari** – Full Stack AI Development
+* **Anshika Gaur** – Frontend Development
+* **Priyanshi Tamta** – Documentation & Project Management
+* **Swastika Mukherjee** – Overall Contribution
