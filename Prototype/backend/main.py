@@ -1,6 +1,6 @@
 from fastapi import FastAPI, Form, File, UploadFile
-from backend.llm_part import extract_expense
-from backend.ocr_part import extract_text_from_image
+from backend.llm_part import extract_expense #Importiing in the LLM part 
+from backend.ocr_part import extract_text_from_image #Importing in the OCR part
 
 app = FastAPI()
 
