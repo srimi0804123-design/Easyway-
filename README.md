@@ -22,7 +22,7 @@ EASY WAY reduces manual effort by automating data extraction and categorization.
 
 ---
 
-**##SOLUTION:**
+**## SOLUTION:**
 
 **EASY WAY** automates expense analysis using AI.
 
