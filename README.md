@@ -3,34 +3,30 @@
 ### AI-Powered Expense Tracker for Students
 
 ## Overview
+**EASY WAY** is an **AI-powered expense tracking** and **budget management system** that extracts expense details from **bills, receipts, and UPI screenshots** and converts them into **structured data** for **easier analysis and management**.
 
-**EASY WAY** is an intelligent expense tracking and budget management system built using **Artificial Intelligence (AI)** and **Machine Learning (ML)**. It automatically extracts expense details from **bills, receipts, and UPI screenshots**, then converts them into structured data to help users understand and manage their spending.
-
-The goal is simple:
-make expense tracking **effortless**, **automatic**, and **not boring**.
-
+Goal: simplify expense tracking by minimizing manual effort and providing actionable insights.
 ---
 
-## Problem Statement
+## PROBLEM STATEMENT:
 
 Most students:
-
 * Rely heavily on **UPI and cash** for daily transactions
 * Rarely track expenses consistently
 * Avoid budgeting because it feels tedious
 * Never analyze bills beyond “money gone, pain remains”
 
-Manual expense tracking fails because it depends on discipline.
-This project improves expense categorization accuracy by learning from user-specific transaction patterns rather than relying only on vendor names.
+Manual expense tracking relies on consistent discipline, which is difficult to maintain. 
+
+EASY WAY reduces manual effort by automating data extraction and categorization.
 
 ---
 
-## Solution
+**##SOLUTION:**
 
 **EASY WAY** automates expense analysis using AI.
 
 ### How it works:
-
 1. User uploads a **bill image**, **UPI screenshot**, or enters **text/voice input**
 2. The frontend sends data to the backend via API
 3. **OCR** extracts raw text from images
@@ -38,25 +34,22 @@ This project improves expense categorization accuracy by learning from user-spec
 5. Structured expense data is returned
 6. Insights are displayed instantly on the frontend
 
-No spreadsheets. No mental math. No regret later.
+The system eliminates the need for spreadsheets and manual calculations by automating extraction and categorization of expenses .
 
 ---
-
-## Key Features
-
+## KEY FEATURES:
 * Upload receipts, bills, or UPI screenshots
 * Enter expenses using plain text
 * AI automatically extracts:
+AI automatically extracts:
 
   * Amount
-  * Merchant
+  * Merchant / Vendor
   * Date
-  * Category
+  * Category (with predicted confidence score)
   * Payment mode
-* Expenses are categorized intelligently
-* Confidence score included for transparency
-* Optional voice-based input for cash expenses (planned)
 
+Transactions with low confidence are marked for closer inspection by users. Optional voice-based input for cash expenses is planned for future versions.
 ---
 ## What Makes EASY WAY Different?
 
@@ -68,27 +61,41 @@ EASY WAY is built for real-world UPI usage, where transaction screenshots contai
 - Assigns a **confidence score** to each prediction, requesting user input only when uncertainty is high
 
 
-## Tech Stack
+## TECH STACK
 
-### Frontend
+### FRONTEND
 
-* **Streamlit** (Prototype UI)
-* Lightweight, mobile-friendly interface
-* Supports:
+ **PHASE-I**
+**STREAMLIT:** (Prototype UI) 
+
+* Lightweight, mobile-friendly interface. 
+
+* **Supports:**
 
   * Image upload
   * Text-based expense entry
-* Communicates with backend via REST API
+* Communicates with backend via REST API  
 
 **Focus:**
-Minimum friction for user input
+Designed for quick and easy data entry.
+
+**PHASE-II**
+**HTML,CSS,JavaScript:**
+The frontend is built using **HTML, CSS, and JavaScript**, providing a simple and responsive interface for users to upload UPI screenshots, receipts, and manual expense entries.
+
+**FOCUS:**
+- Clean and intuitive UI for quick interaction
+- Client-side validation for uploads and inputs
+- Seamless integration with the backend API for OCR and AI processing
+
 
 ---
 
-### Backend
+### BACKEND
 
 * **Python + FastAPI**
-* Handles:
+
+* **Handles**:
 
   * API requests
   * OCR processing
@@ -96,7 +103,7 @@ Minimum friction for user input
   * Structured JSON responses
 
 **Focus:**
-Speed, simplicity, and clean data flow
+Fast and simple API design with clean data flow.
 
 ---
 
@@ -117,23 +124,23 @@ Speed, simplicity, and clean data flow
 * Assigns confidence scores
 
 **Design Philosophy:**
-Interpretation over rigid rules.
+
+Uses AI reasoning to interpret data rather than relying on rigid rules.
 
 ---
 
-## Database
+## DATABASE
 
 * **MongoDB** (Planned)
 * Not used in the current prototype
 * Chosen for:
-
   * Flexible document structure
   * Scalability
-  * Efficient handling of large expense datasets
+  * Efficient handling of large volume of expence data
 
 ---
 
-## Tools & Development Environment
+## TOOLS & DEVELOPMENT ENVIRONMENT:
 
 * **Git** – Version control
 * **GitHub** – Repository hosting and collaboration
@@ -141,7 +148,7 @@ Interpretation over rigid rules.
 
 ---
 
-## System Workflow
+## SYSTEM WORKFLOW:
 
 1. User submits expense input
 2. Frontend sends request to FastAPI backend
@@ -152,7 +159,7 @@ Interpretation over rigid rules.
 4. Structured expense data is generated
 5. Results are returned and displayed
 
-## System Main Flowchart
+## SYSTEM MAIN FLOWCHART:
 
 ![Main flowchart](flowchart/main_flowchart.jpg)
 
@@ -160,7 +167,7 @@ Interpretation over rigid rules.
 ![AI_flow](flowchart/AI_processing_layers.jpg)
 
 ---
-## Demo Prototype
+## DEMO PROTOTYPE:
 * Input Text
 ![Input_Text](Prototype/Images/input_text.png)
 * Extracted Details
@@ -254,7 +261,7 @@ streamlit run app.py
 
 * **Vanshika Maheshwari** – Full Stack AI Development
 * **Anshika Gaur** – Frontend Development
-* **Priyanshi Tamta** – Documentation & Project Management
+* **Priyanshi Tamta** – Documentation & Project Management 
 * **Swastika Mukherjee** – Overall Contribution and Readme.md files
 
   
