@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>EasyWay 🐼</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+
+  <!-- Floating Mascot -->
+  <div class="mascot">🐼</div>
+
+  <h1>EasyWay 🐼</h1>
+
+  <!-- Navigation -->
+  <nav>
+    <button onclick="showSection('expense')">🏠 Expense</button>
+    <button onclick="showSection('calendar')">📅 Calendar</button>
+    <button onclick="showSection('category')">🧾 Categories</button>
+    <button onclick="showSection('income')">💰 Income</button>
+    <button onclick="showSection('reminder')">⏰ Reminder</button>
+  </nav>
+
+  <!-- EXPENSE SECTION -->
+  <section id="expense" class="section active">
+    <h2>📝 Add Expense</h2>
+
+    <textarea id="expenseText" placeholder="Spent 200 on food 🍔"></textarea>
+    <button id="parseTextBtn">Parse Expense</button>
+
+    <h3>📷 Upload Receipt</h3>
+    <input type="file" id="imageInput" />
+    <button id="parseImageBtn">Parse Image</button>
+
+    <pre id="output">🐼 Waiting for expense...</pre>
+  </section>
+
+  <!-- CALENDAR SECTION -->
+  <section id="calendar" class="section">
+    <h2>📅 Expense Calendar</h2>
+    <p>Select a date to view expenses</p>
+    <input type="date" />
+    <div class="placeholder">🐻 Calendar data will appear here</div>
+  </section>
+  <!--Category list -->
+  <section id="category" class="section">
+  <h2>🧾 Expense Categories</h2>
+  <p>AI-detected categories (editable by user)</p>
+
+  <div class="category-list" id="categoryList">
+    <div class="category-item">🍔 Food</div>
+    <div class="category-item">🏥 Medical</div>
+    <div class="category-item">💸 Money Transfer</div>
+    <div class="category-item">🎉 Social</div>
+    <div class="category-item">🏠 Rent</div>
+  </div>
+
+  <input id="newCategoryInput" placeholder="Add new category 📝" />
+  <button onclick="addCategory()">➕ Add Category</button>
+</section>
+
+
+  <!-- INCOME SECTION -->
+  <section id="income" class="section">
+    <h2>💰 Income Tracker</h2>
+
+    <input type="text" placeholder="Income source (Salary, Freelance)" />
+    <input type="number" placeholder="Amount" />
+    <button>Add Income</button>
+
+    <div class="placeholder">🐻 Income records will appear here</div>
+  </section>
+
+  <!-- REMINDER SECTION -->
+  <section id="reminder" class="section">
+    <h2>⏰ Bill Reminders</h2>
+
+    <input type="text" placeholder="Bill name (Electricity)" />
+    <input type="date" />
+    <button>Set Reminder</button>
+
+    <div class="placeholder">🐼 Reminders list will appear here</div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
