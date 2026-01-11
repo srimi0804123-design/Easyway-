@@ -64,7 +64,7 @@ EASY WAY is built for real-world UPI usage, where transaction screenshots contai
 
 ### FRONTEND
 
- **PHASE-I**
+ **PHASE-I**<br/>
 **STREAMLIT:** (Prototype UI) 
 
 * Lightweight, mobile-friendly interface. 
@@ -78,7 +78,7 @@ EASY WAY is built for real-world UPI usage, where transaction screenshots contai
 **Focus:**
 Designed for quick and easy data entry.
 
-**PHASE-II**
+**PHASE-II**<br/>
 **HTML,CSS,JavaScript:**
 The frontend is built using **HTML, CSS, and JavaScript**, providing a simple and responsive interface for users to upload UPI screenshots, receipts, and manual expense entries.
 
