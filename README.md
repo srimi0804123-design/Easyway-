@@ -267,9 +267,9 @@ streamlit run app.py
 
 ###Website:
 
-* **Swastika Maheshwari**-Backend
-* **Swastika Mukherjee**- Overall management and management files 
-* **Priyanshi Tamta**-Frontend
+* **Vanshika Maheshwari**-Backend Development
+* **Swastika Mukherjee**- Overall management and README.md files 
+* **Priyanshi Tamta**-Frontend Development
 * **Anshika Gaur**- Project management and Data Flow Diagram
 
   
