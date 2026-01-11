@@ -255,4 +255,6 @@ streamlit run app.py
 * **Vanshika Maheshwari** – Full Stack AI Development
 * **Anshika Gaur** – Frontend Development
 * **Priyanshi Tamta** – Documentation & Project Management
-* **Swastika Mukherjee** – Overall Contribution
+* **Swastika Mukherjee** – Overall Contribution and Readme.md files
+
+  
