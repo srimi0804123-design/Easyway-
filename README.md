@@ -22,7 +22,7 @@ EASY WAY reduces manual effort by automating data extraction and categorization.
 
 ---
 
-**## SOLUTION:**
+## SOLUTION:
 
 **EASY WAY** automates expense analysis using AI.
 
@@ -48,7 +48,6 @@ AI automatically extracts:
   * Date
   * Category (with predicted confidence score)
   * Payment mode
-
 Transactions with low confidence are marked for closer inspection by users. Optional voice-based input for cash expenses is planned for future versions.
 ---
 ## What Makes EASY WAY Different?
