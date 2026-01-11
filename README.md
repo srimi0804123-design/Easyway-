@@ -21,7 +21,7 @@ Most students:
 * Never analyze bills beyond “money gone, pain remains”
 
 Manual expense tracking fails because it depends on discipline.
-This project removes that dependency entirely.
+This project improves expense categorization accuracy by learning from user-specific transaction patterns rather than relying only on vendor names.
 
 ---
 
