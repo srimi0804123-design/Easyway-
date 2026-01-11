@@ -1,0 +1,1 @@
+from OCR_part.ocr import extract_text_from_image
