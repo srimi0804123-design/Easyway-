@@ -1,4 +1,4 @@
-# EASY WAY 💸
+# EASY WAY 
 
 ### AI-Powered Expense Tracker for Students
 
