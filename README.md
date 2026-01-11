@@ -47,7 +47,7 @@ AI automatically extracts:
   * Merchant / Vendor
   * Date
   * Category (with predicted confidence score)
-  * Payment mode
+  * Payment mode<br/>
 Transactions with low confidence are marked for closer inspection by users. Optional voice-based input for cash expenses is planned for future versions.
 ---
 ## What Makes EASY WAY Different?
