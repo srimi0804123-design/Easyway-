@@ -58,6 +58,15 @@ No spreadsheets. No mental math. No regret later.
 * Optional voice-based input for cash expenses (planned)
 
 ---
+## What Makes EASY WAY Different?
+
+EASY WAY is built for real-world UPI usage, where transaction screenshots contain noisy OCR data and vendor names are often personal rather than business identifiers.
+
+- Uses **OCR** to extract payment details from UPI screenshots, even when the data is incomplete or messy  
+- Applies a **Large Language Model (LLM)** as a reasoning layer to interpret transactions instead of relying on rigid rule-based systems  
+- Learns from **user corrections** to build personalized expense categorization over time  
+- Assigns a **confidence score** to each prediction, requesting user input only when uncertainty is high
+
 
 ## Tech Stack
 
