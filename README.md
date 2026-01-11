@@ -258,14 +258,14 @@ streamlit run app.py
 ---
 
 ## Credits
-###Prototype:
+### Prototype:
 
 * **Vanshika Maheshwari** – Full Stack AI Development
 * **Anshika Gaur** – Frontend Development
 * **Priyanshi Tamta** – Documentation & Project Management 
 * **Swastika Mukherjee** – Overall Contribution and Readme.md files.
 
-###Website:
+### Website:
 
 * **Vanshika Maheshwari**-Backend Development
 * **Swastika Mukherjee**- Overall management and README.md files 
