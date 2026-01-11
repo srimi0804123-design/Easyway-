@@ -79,6 +79,7 @@ EASY WAY is built for real-world UPI usage, where transaction screenshots contai
 Designed for quick and easy data entry.
 
 **PHASE-II**<br/>
+
 **HTML,CSS,JavaScript:**
 The frontend is built using **HTML, CSS, and JavaScript**, providing a simple and responsive interface for users to upload UPI screenshots, receipts, and manual expense entries.
 
